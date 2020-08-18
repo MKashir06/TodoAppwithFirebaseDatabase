@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../bootstrap-4.4.1-dist/css/bootstrap.min.css">
+
+    <script src="https://kit.fontawesome.com/cf29be50d2.js" crossorigin="anonymous"></script>
+
+    <!-- Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBvSZo1uhtWNUW5XQsvjruesCGTLaKc5YA",
+            authDomain: "mkashirwm5950onlinewebacourses.firebaseapp.com",
+            databaseURL: "https://mkashirwm5950onlinewebacourses.firebaseio.com",
+            projectId: "mkashirwm5950onlinewebacourses",
+            storageBucket: "mkashirwm5950onlinewebacourses.appspot.com",
+            messagingSenderId: "1049296651826",
+            appId: "1:1049296651826:web:b9e124b7da9a6779a95e2b",
+            measurementId: "G-VWD412QJLC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+</head>
+
+<body>
+    <div class="todoBox">
+        <div id="myDIV" class="head">
+            <h2>Kashir's Todo List</h2>
+            <div class="row">
+                <input type="text" id="myTodo" class="col-6 col-sm-6 col-md-8 col-lg-8 col-xl-8" placeholder="Add What Todo...">
+                <span onclick="newElement()" class="addBtn btn-primary col-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">Add</span>
+                <span onclick="deleteAll()" class="delBtn btn-danger col-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">Delete All</span>
+            </div>
+        </div>
+
+        <ul id="myUL">
+        </ul>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
